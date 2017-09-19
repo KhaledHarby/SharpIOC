@@ -1,4 +1,4 @@
-###Sharp IOC
+### Sharp IOC
 
 ## Contents
 
@@ -13,9 +13,10 @@
 		5. <a href="#further-readings">Further readings</a>
 		
 		
+4. <a href="#howtouse">How to use ?</a>
 
-4. <a href="#concepts">Examples</a>
-	1. <a href="#about-di">Code Examples (DI)</a>	        
+5. <a href="#Example">Examples</a>
+	1. <a href="#Example">Code Examples (DI)</a>	        
 		1. <a href="#ewindows">Windows</a>
 		2. <a href="#eweb">Web</a>
 		3. <a href="#ewebapi">Web API</a>
@@ -115,6 +116,65 @@ public class SharpClass {
 
 
 
+#### <a id="howtouse"></a>How to use ?
+
+1 - Create SharpIocContainer instance
+```cs
+ var container = new SharpIocContainter();
+ ```
+ 
+ 2- Create Bootstrapper [You can directly register objects without bootsrtapper creation .It's depends on you]
+ ```cs
+  public static class BootStrapper
+    {
+        public static void Configure(IContainer container)
+        {
+            container.Register<DbContext, Models.masterEntities>(LifeCycle.Singleton);
+            container.Register<HomeController, HomeController>(LifeCycle.Transient);
+        }
+    }
+ ```
+ 
+ 3 - Configure Bootstrapper 
+ ```cs
+  var container = new SharpIocContainter();
+  BootStrapper.Configure(container); 
+ ```
+ 
+ 
+ 4 - Check if an objects is already registered  
+  ```cs
+ container.IsRegistered(typeof(DbContext));
+```
+ 
+   ```cs
+ container.IsRegistered(typeof(DbContext), LifeCycle.Singleton);
+ ```
+ 
+    ```cs
+  container.IsRegistered<DbContext>();
+ ```
+ 
+ 
+     ```cs
+  container.IsRegistered<DbContext>();
+ ```
+ 
+      ```cs
+container.IsRegistered<DbContext>(LifeCycle.Singleton);
+```
+ 
+ 
+     ```cs
+  container.IsRegistered<DbContext, masterEntities>();
+ ```
+ 
+      ```cs
+  container.IsRegistered<DbContext, masterEntities>(LifeCycle.Singleton);
+ ```
+ 
+ 
+
 #### <a id="Examples"></a>Code Examples
 
 #### <a id="ewindows"></a>Windows
@@ -147,7 +207,6 @@ public partial class Form1 : Form
 
 1 - Create Bootstrapper
 ```cs
-
  public static class BootStrapper
     {
         public static void Configure(IContainer container)
@@ -156,13 +215,12 @@ public partial class Form1 : Form
             container.Register<HomeController, HomeController>(LifeCycle.Transient);
         }
     }
-
 ```
 
 
  2- Create IOC Factory thats respresents the controller factory registered by default
+ 
 ```cs
-
   public class IocFactory : DefaultControllerFactory
     {
         private readonly IContainer container;
@@ -182,11 +240,10 @@ public partial class Form1 : Form
 
 
 3 - Go to Global.asax.cs > Application_Start 
-```cs
-            var container = new SharpIocContainter();
+
+```cs            var container = new SharpIocContainter();
             BootStrapper.Configure(container);
-            ControllerBuilder.Current.SetControllerFactory(new IocFactory(container));
-	    
+            ControllerBuilder.Current.SetControllerFactory(new IocFactory(container));	    
 ```
 
 
