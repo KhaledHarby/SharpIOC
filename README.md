@@ -151,25 +151,25 @@ public class SharpClass {
  container.IsRegistered(typeof(DbContext), LifeCycle.Singleton);
  ```
  
-    ```cs
+   ```cs
   container.IsRegistered<DbContext>();
  ```
  
  
-     ```cs
+   ```cs
   container.IsRegistered<DbContext>();
  ```
  
-      ```cs
+   ```cs
 container.IsRegistered<DbContext>(LifeCycle.Singleton);
 ```
  
  
-     ```cs
+   ```cs
   container.IsRegistered<DbContext, masterEntities>();
  ```
  
-      ```cs
+   ```cs
   container.IsRegistered<DbContext, masterEntities>(LifeCycle.Singleton);
  ```
  
