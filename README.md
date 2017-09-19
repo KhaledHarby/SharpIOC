@@ -14,13 +14,12 @@
 		
 		
 
-4. <a href="#concepts">Concepts</a>
-	1. <a href="#about-di">About dependency injection (DI)</a>
-		1. <a href="#what-is">What is a DI container?</a>
-		2. <a href="#why-use-it">Why use a DI container?</a>
-		3. <a href="#why-use-with-unity">Why use it with Unity?</a>
-		4. <a href="#common-use-cases">Common use cases</a>
-		5. <a href="#further-readings">Further readings</a>		
+4. <a href="#concepts">Examples</a>
+	1. <a href="#about-di">Code Examples (DI)</a>	        
+		1. <a href="#ewindows">Windows</a>
+		2. <a href="#eweb">Web</a>
+		3. <a href="#ewebapi">Web API</a>
+		4. <a href="#econsole">Console</a>		
 
 ## <a id="introduction"></a>Introduction
 
@@ -113,3 +112,86 @@ public class SharpClass {
 - [The truth behind Inversion of Control – Part III – Entity Component Systems](http://www.sebaslab.com/the-truth-behind-inversion-of-control-part-iii-entity-component-systems/)
 - [The truth behind Inversion of Control – Part IV – Dependency Inversion Principle](http://www.sebaslab.com/the-truth-behind-inversion-of-control-part-iii-entity-component-systems/)
 - [From STUPID to SOLID Code!](http://williamdurand.fr/2013/07/30/from-stupid-to-solid-code/)
+
+
+
+#### <a id="Examples"></a>Code Examples
+
+#### <a id="ewindows"></a>Windows
+
+```cs
+public partial class Form1 : Form
+    {
+        private readonly ILog _log;
+        public Form1(ILog log)
+        {
+            InitializeComponent();
+            _log = log;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnWriteMessage_Click(object sender, EventArgs e)
+        {
+            _log.Log("SharpIoc ");
+        }
+    }
+    ```
+
+
+
+#### <a id="eweb"></a>Web 
+
+1 - Create Bootstrapper
+```cs
+
+ public static class BootStrapper
+    {
+        public static void Configure(IContainer container)
+        {
+            container.Register<DbContext, Models.masterEntities>(LifeCycle.Singleton);
+            container.Register<HomeController, HomeController>(LifeCycle.Transient);
+        }
+    }
+
+```
+
+
+ 2- Create IOC Factory thats respresents the controller factory registered by default
+```cs
+
+  public class IocFactory : DefaultControllerFactory
+    {
+        private readonly IContainer container;
+
+        public IocFactory(IContainer container)
+        {
+            this.container = container;
+        }
+
+        protected override IController GetControllerInstance(RequestContext requestContext, Type controllerType)
+        {
+            return container.Resolve(controllerType) as Controller;
+        }
+    }
+```
+
+
+
+3 - Go to Global.asax.cs > Application_Start 
+```cs
+            var container = new SharpIocContainter();
+            BootStrapper.Configure(container);
+            ControllerBuilder.Current.SetControllerFactory(new IocFactory(container));
+	    
+```
+
+
+
+
+
+
+
