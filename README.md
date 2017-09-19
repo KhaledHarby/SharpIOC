@@ -12,12 +12,15 @@
 		4. <a href="#common-use-cases">Common use cases</a>
 		5. <a href="#further-readings">Further readings</a>
 		
-4. <a href="#Examples">Examples</a>
-       1. <a href="#Web_Win_Console_Example">Examples [Web - Windows - Console] ..etc </a>
-                    1. <a href="#what-is">What is a DI container?</a>
-		   2. <a href="#why-use-it">Why use a DI container?</a>
-		  3. <a href="#why-use-with-unity">Why use it with Unity?</a>
-           
+		
+
+4. <a href="#concepts">Concepts</a>
+	1. <a href="#about-di">About dependency injection (DI)</a>
+		1. <a href="#what-is">What is a DI container?</a>
+		2. <a href="#why-use-it">Why use a DI container?</a>
+		3. <a href="#why-use-with-unity">Why use it with Unity?</a>
+		4. <a href="#common-use-cases">Common use cases</a>
+		5. <a href="#further-readings">Further readings</a>		
 
 ## <a id="introduction"></a>Introduction
 
