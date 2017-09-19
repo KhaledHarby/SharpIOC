@@ -1,0 +1,4 @@
+E:\Batech Projects\Batech ERP\SharpIn\SharpIn\bin\Debug\SharpIn.dll
+E:\Batech Projects\Batech ERP\SharpIn\SharpIn\bin\Debug\SharpIn.pdb
+E:\Batech Projects\Batech ERP\SharpIn\SharpIn\obj\Debug\SharpIn.dll
+E:\Batech Projects\Batech ERP\SharpIn\SharpIn\obj\Debug\SharpIn.pdb

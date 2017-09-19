@@ -1,0 +1,5 @@
+E:\Batech Projects\Batech ERP\SharpIn\SharpIn.Console.Test\bin\Debug\SharpIn.Console.Test.exe.config
+E:\Batech Projects\Batech ERP\SharpIn\SharpIn.Console.Test\bin\Debug\SharpIn.Console.Test.exe
+E:\Batech Projects\Batech ERP\SharpIn\SharpIn.Console.Test\bin\Debug\SharpIn.Console.Test.pdb
+E:\Batech Projects\Batech ERP\SharpIn\SharpIn.Console.Test\obj\Debug\SharpIn.Console.Test.exe
+E:\Batech Projects\Batech ERP\SharpIn\SharpIn.Console.Test\obj\Debug\SharpIn.Console.Test.pdb

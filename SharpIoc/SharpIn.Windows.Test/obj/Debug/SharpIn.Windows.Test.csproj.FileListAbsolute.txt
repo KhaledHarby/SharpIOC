@@ -1,0 +1,11 @@
+E:\Batech Projects\Batech ERP\SharpIn\SharpIn.Windows.Test\bin\Debug\SharpIn.Windows.Test.exe.config
+E:\Batech Projects\Batech ERP\SharpIn\SharpIn.Windows.Test\bin\Debug\SharpIn.Windows.Test.exe
+E:\Batech Projects\Batech ERP\SharpIn\SharpIn.Windows.Test\bin\Debug\SharpIn.Windows.Test.pdb
+E:\Batech Projects\Batech ERP\SharpIn\SharpIn.Windows.Test\obj\Debug\SharpIn.Windows.Test.csprojResolveAssemblyReference.cache
+E:\Batech Projects\Batech ERP\SharpIn\SharpIn.Windows.Test\obj\Debug\SharpIn.Windows.Test.Properties.Resources.resources
+E:\Batech Projects\Batech ERP\SharpIn\SharpIn.Windows.Test\obj\Debug\SharpIn.Windows.Test.csproj.GenerateResource.Cache
+E:\Batech Projects\Batech ERP\SharpIn\SharpIn.Windows.Test\obj\Debug\SharpIn.Windows.Test.exe
+E:\Batech Projects\Batech ERP\SharpIn\SharpIn.Windows.Test\obj\Debug\SharpIn.Windows.Test.pdb
+E:\Batech Projects\Batech ERP\SharpIn\SharpIn.Windows.Test\obj\Debug\SharpIn.Windows.Test.Form1.resources
+E:\Batech Projects\Batech ERP\SharpIn\SharpIn.Windows.Test\bin\Debug\Sharp.dll
+E:\Batech Projects\Batech ERP\SharpIn\SharpIn.Windows.Test\bin\Debug\Sharp.pdb
